@@ -30,5 +30,4 @@ public class ThreeWayQuickSort {
         sort(a, lo, lt - 1);
         sort(a, gt + 1, hi);
     }
-
 }

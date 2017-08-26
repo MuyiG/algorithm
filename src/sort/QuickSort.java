@@ -21,15 +21,11 @@ public class QuickSort {
     }
 
     private static int partition(Comparable[] a, int lo, int hi) {
-        int i = lo + 1;
-        int j = hi;
+        Comparable pivot = a[lo];
+        int i = lo, j = hi + 1; // 初始值有讲究，配合后面的++i、--j使用
         while (true) {
-            while (i <= hi && SortUtil.less(a[i], a[lo])) {
-                i++;
-            }
-            while (j >= lo && SortUtil.less(a[lo], a[j])) {
-                j--;
-            }
+            while (++i < hi && a[i].compareTo(pivot) < 0); // ++i还是i++? < hi还是 <= hi < 0还是 <= 0?
+            while (--j > lo && a[j].compareTo(pivot) > 0); // > lo 还是 > lo +1?
             if (i >= j) {
                 SortUtil.exchange(a, lo, j);
                 return j;
@@ -37,4 +33,5 @@ public class QuickSort {
             SortUtil.exchange(a, i, j);
         }
     }
+
 }
