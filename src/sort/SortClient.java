@@ -11,7 +11,7 @@ import java.io.InputStreamReader;
 public class SortClient {
 
     public static void main(String[] args) throws Exception {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(new File("src/sort/toBeSorted.txt"))));
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(new File("input/sort/toBeSorted.txt"))));
         String temp;
 
         while ((temp = bufferedReader.readLine()) != null) {
