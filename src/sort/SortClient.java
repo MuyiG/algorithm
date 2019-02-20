@@ -30,7 +30,7 @@ public class SortClient {
     private static String printIntegerArray(Integer[] a) {
         String result = "";
         for (Integer i : a) {
-            result += (i + "");
+            result += (i + " ");
         }
         return result;
     }
